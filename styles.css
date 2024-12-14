@@ -1,0 +1,157 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.custom-navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: #e3b7e9;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 30px 0;
+}
+
+.custom-navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+}
+
+.custom-navbar-brand {
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.custom-navbar-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.custom-navbar-links li {
+  display: inline-block;
+}
+
+.custom-navbar-links a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.custom-navbar-links a:hover {
+  color: #ff6f61;
+}
+
+/* Dropdown Button for Small Screens */
+.custom-dropdown-button {
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  right: 20px;
+  z-index: 1001;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .custom-navbar-links {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      background-color: #e3b7e9;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      border-top: 1px solid #ccc;
+  }
+
+  .custom-navbar-links.show {
+      display: flex;
+      animation: slide-down 0.3s ease-out;
+  }
+
+  .custom-dropdown-button {
+      display: block;
+  }
+}
+
+@keyframes slide-down {
+  from {
+      transform: translateY(-20px);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+ 
+.carousel-inner img {
+  object-fit: cover; /* Ensures the images fill their container without distortion */
+  height: 800px; /* Adjust based on your preference */
+}
+@media screen and (max-width: 768px) {
+  .carousel-inner img {
+    height: 450px; /* Reduced height for smaller screens */
+  }
+}
+@media screen and (max-width: 500px) {
+  .carousel-inner img {
+    height: 300px; /* Reduced height for smaller screens */
+  }
+}
+#welcome-section.welcome-section {
+  background-color: #e3b7e9 !important; /* Use !important as a last resort */
+  height: 100vh;
+}
+.custom-card {
+  background-color: #fcdcdc; /* Soft pink background */
+  
+  border-radius: 10px;
+  transition: transform 0.3s ease; /* Subtle animation */
+}
+
+.custom-card:hover {
+  transform: scale(1.05); /* Zoom effect on hover */
+}
+
+.custom-card .card-title {
+  font-size: 1.2rem;
+  color: #444; /* Darker text for the title */
+}
+
+.custom-card h2 {
+  font-size: 2.5rem;
+  color: #333; /* Prominent number */
+}
+
+.custom-card span {
+  font-size: 1.5rem;
+  color: #999; /* Subtle "+" sign */
+}
